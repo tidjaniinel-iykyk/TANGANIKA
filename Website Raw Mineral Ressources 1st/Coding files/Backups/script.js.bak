@@ -1,0 +1,67 @@
+(() => {
+  const header = document.getElementById("site-header");
+  const hamburger = document.getElementById("hamburger");
+  let mobileMenu = document.getElementById("mobile-menu");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})();  }    }));      hamburger.setAttribute('aria-expanded','false');      mobileMenu.setAttribute("aria-hidden","true");
+n    mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click", ()=>{    });      hamburger.setAttribute('aria-expanded', shown ? 'false' : 'true');      mobileMenu.setAttribute("aria-hidden", shown ? "true" : "false");      const shown = mobileMenu.getAttribute("aria-hidden") === "false";
+n    hamburger.addEventListener("click", ()=>{    if (!mobileMenu.hasAttribute('aria-hidden')) mobileMenu.setAttribute('aria-hidden','true');    if (!hamburger.hasAttribute('aria-expanded')) hamburger.setAttribute('aria-expanded','false');    // initialize accessible state
+n  if(hamburger && mobileMenu){  onScroll();
+n  window.addEventListener("scroll", onScroll, {passive:true});  }    }      header.classList.add("hidden");      header.classList.remove("visible");    } else {      header.classList.add("visible");      header.classList.remove("hidden");    if(window.scrollY > 50){    if(!header) return;
+n  function onScroll(){  }
+n    document.body.appendChild(mobileMenu);    }      });        mobileMenu.appendChild(link);        link.textContent = href.replace('.html','').replace(/[-_]/g,' ');        link.href = href;        const link = document.createElement('a');      ['about.html','products.html','traceability.html','quality.html','operations.html','index.html'].forEach(href => {      // fallback list    } else {      });        mobileMenu.appendChild(link);        link.textContent = a.textContent;        link.href = a.href;        const link = document.createElement('a');      nav.querySelectorAll('a').forEach(a => {      // clone nav links into the mobile menu
+n    if(nav){    mobileMenu.setAttribute('aria-hidden','true');    mobileMenu.className = 'mobile-menu';    mobileMenu.id = 'mobile-menu';    mobileMenu = document.createElement('div');    const nav = document.getElementById('main-nav');  if(!mobileMenu){  // hamburger button will function on all pages (except home, which hides the button).n  // If no mobile menu exists in the HTML, create a minimal one dynamically so the

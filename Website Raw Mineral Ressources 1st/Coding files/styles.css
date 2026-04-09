@@ -1,0 +1,357 @@
+﻿:root{
+  --bg1: #f7e8ff; /* very pale purple */
+  --accent1: #d7b3ff; /* pastel purple */
+  --accent2: #ffd3e8; /* pastel pink */
+  --text: #2b2340;
+  --muted: #5b4f6a;
+  --glass: rgba(255,255,255,0.6);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--text);background:var(--bg1);-webkit-font-smoothing:antialiased}
+.container{max-width:1000px;margin:0 auto;padding:2rem}
+
+/* Header (hidden until scroll) */
+header{position:fixed;left:0;right:0;top:0;z-index:50;transition:transform .35s ease,opacity .35s ease;padding:0.5rem 0}
+header.hidden{opacity:0;transform:translateY(-15px);pointer-events:none}
+header.visible{opacity:1;transform:none;pointer-events:auto}
+header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;color:var(--text);text-decoration:none}
+nav a{margin-left:1.25rem;color:var(--muted);text-decoration:none}
+
+#hamburger{display:block;background:transparent;border:0;font-size:1.25rem}
+
+/* Hero */
+.hero{position:relative;height:100vh;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;color:white}
+.hero h1{font-size:2.25rem;margin:0 0 0.5rem;color:#fff;text-shadow:0 6px 18px rgba(40,20,60,0.35)}
+.subtitle{opacity:0.95;margin:0 0 1.6rem}
+.scroll-hint{display:inline-block;padding:.5rem .9rem;border-radius:999px;background:rgba(255,255,255,0.15);color:#fff;text-decoration:none}
+
+/* Page-specific: hide full hero on the traceability page so the page starts at commitments */
+.trace .hero{display:none}
+.trace .content{padding-top:2rem}
+
+/* Keep the hamburger visible and interactive even when header is hidden (except homepage).
+   We override pointer-events and position so the button remains accessible. */
+header.hidden #hamburger{
+  display:block;
+  position:fixed;
+  right:16px;
+  top:12px;
+  z-index:70;
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Content */
+.content{padding:4rem 0;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9))}
+
+/* Mobile menu */
+.mobile-menu{position:fixed;top:60px;right:16px;background:var(--glass);backdrop-filter:blur(6px);padding:1rem;border-radius:12px;flex-direction:column;gap:0.5rem;z-index:60}
+.mobile-menu a{color:var(--text);text-decoration:none}
+
+/* Respect aria-hidden for the mobile menu: hide when true, show when false (all viewports).
+   This lets the hamburger open an overlay/menu even on desktop if desired. */
+.mobile-menu[aria-hidden="true"]{display:none}
+.mobile-menu[aria-hidden="false"]{display:flex}
+
+/* Responsive */
+@media (max-width:800px){
+  nav{display:none}
+  #hamburger{display:block}
+  .hero h1{font-size:1.6rem}
+  .container{padding:1rem}
+  .mobile-menu{display:flex}
+}
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root{
+  /* Earthy & Trustworthy Scheme */
+  --bg1: #f9f7f3;      /* Warm Off-White */
+  --accent1: #b45309;  /* Muted Ochre/Terracotta */
+  --accent2: #d97706;  /* Softer Gold */
+  --text: #1f2937;      /* Dark Charcoal */
+  --muted: #6b7280;    /* Medium Gray */
+  --glass: rgba(255,255,255,0.6);
+}
+
+
+*{box-sizing:border-box}
+html{
+  scroll-behavior: smooth; /* Add smooth scrolling for anchor links */
+}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Roboto', sans-serif; /* Body font */
+  color:var(--text);
+  background:var(--bg1);
+  -webkit-font-smoothing:antialiased
+}
+h1, h2, h3, h4, h5, h6 {font-family: 'Arvo', serif;} /* Heading font */
+.container{max-width:1000px;margin:0 auto;padding:2rem}
+
+
+/* Header (hidden until scroll) */
+header{position:fixed;left:0;right:0;top:0;z-index:50;transition:transform .35s ease,opacity .35s ease;padding:0.5rem 0}
+header.hidden{opacity:0;transform:translateY(-15px);pointer-events:none}
+header.visible{opacity:1;transform:none;pointer-events:auto}
+header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;color:var(--text);text-decoration:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.1rem;align-items:center}
+nav a, nav a:visited{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--text)}
+nav a:hover, .mobile-menu a:hover{
+  color: var(--text);
+}
+
+/* Visible focus styles for keyboard users */
+nav a:focus, .mobile-menu a:focus, .mobile-menu button:focus{
+  outline:3px solid rgba(217,119,6,0.18);
+  outline-offset:3px;
+  border-radius:6px;
+}
+
+#hamburger{display:none;background:transparent;border:0;font-size:1.25rem}
+body:not(.home) #hamburger{display:block;}
+
+/* Hero */
+.hero{position:relative;height:100vh;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;color:white}
+.hero h1{font-size:2.25rem;margin:0 0 0.5rem;color:#fff;text-shadow:0 6px 18px rgba(40,20,60,0.35)}
+.hero-inner{max-width:920px;padding:2rem;border-radius:8px;background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.25));}
+.hero-inner h1{margin:0;color:#fff}
+.subtitle{opacity:0.95;margin:0 0 1.6rem}
+.scroll-hint{display:inline-block;padding:.5rem .9rem;border-radius:999px;background:rgba(255,255,255,0.15);color:#fff;text-decoration:none}
+
+/* Page-specific: hide full hero on the traceability page so the page starts at commitments */
+.trace .hero{display:none}
+.trace .content{padding-top:2rem}
+
+/* Content */
+.content{padding:4rem 0;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9))}
+
+/* Mobile menu */
+.mobile-menu{position:fixed;top:60px;right:16px;background:var(--glass);backdrop-filter:blur(6px);padding:1rem;border-radius:12px;flex-direction:column;gap:0.5rem;z-index:60}
+.mobile-menu ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0.5rem}
+.mobile-menu a{color:var(--text);text-decoration:none}
+
+/* Respect aria-hidden for the mobile menu: hide when true, show when false (all viewports).
+   This lets the hamburger open an overlay/menu even on desktop if desired. */
+.mobile-menu[aria-hidden="true"]{display:none}
+.mobile-menu[aria-hidden="false"]{display:flex}
+
+/* Full-screen overlay for mobile menu */
+.mobile-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:54;display:none}
+.mobile-overlay[aria-hidden="false"]{display:block}
+
+/* Mobile menu expanded state (covers left side) */
+.mobile-menu[aria-hidden="false"]{position:fixed;top:0;right:0;left:0;bottom:0;margin:0;padding:2.25rem;display:flex;flex-direction:column;align-items:flex-start;gap:1rem;border-radius:0}
+.mobile-menu .mobile-close{align-self:flex-end;background:transparent;border:0;font-size:1.5rem;color:var(--text)}
+
+/* Responsive */
+@media (max-width:800px){
+  nav{display:none}
+  .hero h1{font-size:1.6rem}
+  .container{padding:1rem}
+  .mobile-menu{display:flex}
+}
+
+/* small accessibility + polish */
+a{color:var(--accent1)}
+
+/* About two-column layout */
+.about-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:2rem;
+  align-items:center;
+  margin:2rem 0;
+}
+.about-grid .about-image img{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  object-fit:cover;
+  box-shadow: 0 8px 30px rgba(40,20,60,0.12);
+}
+.about-grid .about-text h2{margin-top:0}
+.about-grid blockquote{
+  margin:0;
+  padding:1rem 1rem 1rem 1.5rem;
+  border-left:4px solid var(--accent1); /* Use accent color for consistency */
+  color:var(--muted);
+  line-height:1.5;
+  background:rgba(0,0,0,0.02); /* Subtle background for quote */
+  border-radius:6px;
+}
+
+/* Products Grid */
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:2rem;
+  margin:2rem 0;
+}
+.product-card{
+  background:rgba(255,255,255,0.5);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 16px rgba(40,20,60,0.08);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(40,20,60,0.15);
+}
+.product-image{
+  width:100%;
+  height:200px;
+  overflow:hidden;
+}
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.product-content{
+  padding:1.5rem;
+}
+.product-content h3{
+  margin-top:0;
+  color:var(--accent1);
+}
+
+/* Icons used in commitments */
+.commitment-icon{width:28px;height:28px;vertical-align:middle;margin-right:0.6rem;display:inline-block}
+.cert-card img, .product-content img{max-width:100%;height:auto}
+.product-content p{
+  margin-bottom:0;
+  color:var(--muted);
+  line-height:1.5;
+  font-size:0.95rem;
+}
+
+/* Responsive: tablets and mobile */
+@media (max-width:768px){
+  .about-grid{grid-template-columns:1fr;gap:1rem}
+  .products-grid{grid-template-columns:repeat(auto-fit, minmax(200px, 1fr))}
+}
+@media (max-width:600px){
+  .products-grid{grid-template-columns:1fr}
+}
+
+/* Certifications / Traceability documents */
+.cert-section{padding:3rem 0;background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.98))}
+.cert-intro{color:var(--muted);margin-bottom:1rem}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin:1.5rem 0}
+.cert-card{background:rgba(255,255,255,0.6);padding:1rem;border-radius:10px;box-shadow:0 4px 14px rgba(40,20,60,0.06)}
+.cert-card h3{margin:0 0 .4rem;color:var(--accent1)}
+.cert-status{font-size:0.95rem;color:var(--muted);margin:0 0 .6rem}
+.cert-link{display:inline-block;padding:.45rem .65rem;border-radius:8px;background:var(--accent1);color:#fff;text-decoration:none}
+.cert-link:hover{opacity:.95}
+.cert-note{font-size:0.9rem;color:var(--muted);margin-top:1rem}
+
+/* Team Section */
+.team-section{
+  margin:4rem 0;
+  padding: 3rem 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.5), transparent); /* Add subtle background */
+  border-radius: 16px;
+}
+.team-intro{color:var(--muted);font-size:0.95rem;margin-bottom:2rem;text-align:center}
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:2rem;
+  margin:2rem 0;
+}
+.team-card{
+  background:rgba(255,255,255,0.5);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 16px rgba(40,20,60,0.08);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.team-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(40,20,60,0.15);
+}
+.team-image{
+  width:100%;
+  height:200px;
+  overflow:hidden;
+  background:linear-gradient(135deg, var(--accent2), var(--accent1));
+}
+.team-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.team-content{padding:1.5rem}
+.team-content h3{
+  margin-top:0;
+  color:var(--accent1);
+  font-size:1.2rem; /* Slightly larger font for name */
+}
+.team-role{
+  margin:0.5rem 0;
+  color:var(--muted);
+  font-size:0.9rem;
+  font-style:italic;
+}
+.team-qualifications{
+  margin:1rem 0;
+  padding:1rem;
+  background:rgba(215,179,255,0.08);
+  border-radius:6px;
+}
+.team-qualifications p{
+  margin:0.5rem 0 0;
+  font-size:0.9rem;
+}
+.team-qualifications ul{
+  margin:0.5rem 0;
+  padding-left:1.5rem;
+  font-size:0.85rem;
+  color:var(--muted);
+  list-style:disc;
+}
+.team-qualifications li{margin:0.25rem 0}
+.team-contact{
+  margin-top:1rem;
+  font-size:0.85rem;
+  color:var(--text);
+}
+.team-contact a{color:var(--accent1);text-decoration:none}
+.team-contact a:hover{text-decoration:underline}
+
+@media (max-width:768px){
+  .team-grid{grid-template-columns:repeat(auto-fit, minmax(200px, 1fr))}
+}
+@media (max-width:600px){
+  .team-grid{grid-template-columns:1fr}
+}
+
+/* Footer */
+.site-footer{
+  background:rgba(255,255,255,0.5);
+  padding:2rem 1rem;
+  margin-top:4rem;
+  text-align:center;
+  font-size:0.9rem;
+  color:var(--muted);
+}
+.site-footer .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.footer-links a{
+  margin: 0 0.5rem;
+  text-decoration:none;
+}
+@media(max-width: 600px){.site-footer .container{flex-direction:column;gap:1rem}}
