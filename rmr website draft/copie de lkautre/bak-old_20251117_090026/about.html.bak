@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Raw Minerals Ressources LTD</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="site-header" class="visible">
+      <div class="container">
+        <a class="logo" href="index.html">Raw Minerals Ressources LTD</a>
+        <nav id="main-nav">
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="details.html">Details</a>
+        </nav>
+        <button id="hamburger" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="container" style="padding-top:6rem">
+        <h1>About Us</h1>
+
+        <!-- About Us Section -->
+        <section class="about-grid" aria-labelledby="who-we-are">
+          <div class="about-image">
+            <!-- Replace with a real mining/warehouse photo at assets/mining.jpg if you have one -->
+            <img src="assets/hero.svg" alt="Mining or warehouse image" />
+          </div>
+
+          <div class="about-text">
+            <h2 id="who-we-are">Who We Are</h2>
+            <blockquote>
+              Raw Mineral Resources Company Ltd is a leading mineral exporter based in Rwanda. With years of experience in sourcing, processing, and exporting high-quality minerals, we connect Rwandan resources with global markets. Reliability, compliance, and ethical sourcing are at the heart of everything we do.
+            </blockquote>
+          </div>
+        </section>
+
+        <p><a href="index.html">Back to home</a></p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

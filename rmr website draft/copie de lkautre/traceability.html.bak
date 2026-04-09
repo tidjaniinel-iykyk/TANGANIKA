@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Traceability — Raw Mineral Resources Company LTD</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="site-header" class="visible">
+      <div class="container">
+        <a class="logo" href="index.html">Raw Mineral Resources Company LTD</a>
+        <nav id="main-nav">
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="traceability.html">Traceability</a>
+          <a href="quality.html">Quality control</a>
+          <a href="operations.html">Operations &amp; Services</a>
+          <a href="details.html">Details</a>
+        </nav>
+        <button id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="container" style="padding-top:6rem">
+        <h1>Traceability</h1>
+        <p>We maintain full traceability of our mineral supply chain. Each shipment is documented with origin data and movement history to ensure compliance and transparency for our buyers.</p>
+        <p><a href="products.html">View products</a> â€¢ <a href="index.html">Back to home</a></p>
+      </div>
+    </main>
+
+    <!-- Certifications / Traceability Documents -->
+    <section class="cert-section" aria-labelledby="certs-heading">
+      <div class="container">
+        <h2 id="certs-heading">Certifications &amp; Traceability Documents</h2>
+        <p class="cert-intro">Downloadable certificates and traceability documents for our operations. Files are provided in PDF format; click a link to download the latest copy.</p>
+
+        <div class="cert-grid">
+          <div class="cert-card">
+            <h3>OECD Compliance</h3>
+            <p class="cert-status">Full Implementation</p>
+            <p><a class="cert-link" href="assets/certs/oecd-compliance.pdf" download>Download PDF</a></p>
+          </div>
+
+          <div class="cert-card">
+            <h3>ITSCI Traceability</h3>
+            <p class="cert-status">Active Member</p>
+            <p><a class="cert-link" href="assets/certs/itsci-traceability.pdf" download>Download PDF</a></p>
+          </div>
+
+          <div class="cert-card">
+            <h3>Export Licensing</h3>
+            <p class="cert-status">Rwanda Mines Board</p>
+            <p><a class="cert-link" href="assets/certs/export-licensing-rmb.pdf" download>Download PDF</a></p>
+          </div>
+
+          <div class="cert-card">
+            <h3>ICGLR / RCM</h3>
+            <p class="cert-status">Regional Standards</p>
+            <p><a class="cert-link" href="assets/certs/icglr-rcm.pdf" download>Download PDF</a></p>
+          </div>
+        </div>
+
+        <p class="cert-note">If a PDF is missing or shows a 404, please place the file in <code>assets/certs/</code> using the filename shown for each item. Contact <a href="mailto:traceability@rmr-company.com">traceability@rmr-company.com</a> for document updates.</p>
+      </div>
+    </section>
+
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="traceability.html">Traceability</a>
+      <a href="quality.html">Quality control</a>
+      <a href="operations.html">Operations &amp; Services</a>
+      <a href="details.html">Details</a>
+      <a href="index.html">Home</a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

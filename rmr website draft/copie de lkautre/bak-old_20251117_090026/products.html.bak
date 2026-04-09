@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Products — Raw Minerals Ressources LTD</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="site-header" class="visible">
+      <div class="container">
+        <a class="logo" href="index.html">Raw Minerals Ressources LTD</a>
+        <nav id="main-nav">
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="details.html">Details</a>
+        </nav>
+        <button id="hamburger" aria-label="Menu">☰</button>
+      </div>
+    </header>
+    <main>
+      <div class="container" style="padding-top:6rem">
+        <h1>Our Products</h1>
+        <p>Raw Minerals Ressources LTD exports high-quality, ethically sourced minerals from Rwanda.</p>
+
+        <!-- Products Grid -->
+        <section class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/hero.svg" alt="Tantalite mineral" />
+            </div>
+            <div class="product-content">
+              <h3>Tantalite</h3>
+              <p>High-grade tantalite concentrate for electronics and industrial use.</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/hero.svg" alt="Tin ore mineral" />
+            </div>
+            <div class="product-content">
+              <h3>Tin Ore</h3>
+              <p>Certified tin ore, traceable and conflict-free.</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/hero.svg" alt="Tungsten mineral" />
+            </div>
+            <div class="product-content">
+              <h3>Tungsten</h3>
+              <p>Premium-grade tungsten ore for aerospace and manufacturing applications.</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/hero.svg" alt="Gold ore mineral" />
+            </div>
+            <div class="product-content">
+              <h3>Gold Ore</h3>
+              <p>Ethically sourced gold ore with full traceability and compliance certification.</p>
+            </div>
+          </div>
+        </section>
+
+        <p><a href="index.html">Back to home</a></p>
+      </div>
+    </main>
+
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="details.html">Details</a>
+      <a href="index.html">Home</a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
